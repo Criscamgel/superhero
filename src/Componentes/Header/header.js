@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Buscador from './buscador';
-import Style from './Css/styleglobal.css';
+import Style from '../../Css/styleglobal.css';
 
 class Header extends Component {
     render() {
