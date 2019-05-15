@@ -1,7 +1,373 @@
-body{
-    background-color: rgba(0, 0, 0, 0.09);
+@font-face {
+    src: url("../Fonts/comics.ttf");
+    font-family: comics;
 }
 
-.topBar{
-    background: rgb(13, 82, 139);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.09);
+    font-family: roboto;
+}
+
+.title {
+    color: #0d528b;
+    font-family: comics;
+    font-size: 300%;
+}
+
+/* Estilos Form */
+
+a:hover {
+    text-decoration: none;
+}
+
+/*Estilos por Componente */
+
+.contHeader{
+    width: 100%;
+}
+
+.topBar {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d528b;
+}
+
+.contBuscador {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(206, 204, 204);
+}
+
+/* Grid Modal */
+
+.gridHeader {
+    background-color: #37314e;
+    padding: 1px 0px 1px 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.gridModal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+}
+
+.imgModal {
+    width: 80%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px 0px 0px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px 0px;
+}
+
+.tittleModal {
+    margin: 43px 0px 0px 30px;
+    color: white;
+}
+
+.infoModal {
+    margin: 8px 0px 0px 10px;
+}
+
+.closeModal {
+    margin: 10px;
+    position: absolute;
+    color: white;
+}
+
+.publisherModal {
+    margin: 0px 0px 10px 30px;
+    color: white;
+}
+
+/* Grid de Objetos*/
+
+.gridObjetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+}
+
+.cardCont {
+    margin: 2rem;
+    box-shadow: 0px 3px 10px 0px;
+    transition: .3s ease-in-out;
+}
+
+.card {
+    height: 200px;
+    /**/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cardCont:hover {
+    transform: scale(1.1);
+}
+
+.cardTitle {
+    color: white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #37314e;
+    padding: 1rem;
+}
+
+.cardTitle p {
+    font-size: 12px;
+}
+
+.iconCircleBad {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: white;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.iconCircleBad:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.iconCircleHeart {
+
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: white;
+    grid-column: 3;
+    grid-row: 1;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.iconCircleHeart:hover {
+    background-color: #d82b4b;
+    color: white;
+}
+
+input.iconCircleBad[type=checkbox]:before {
+    visibility: visible;
+    font-family: 'FontAwesome';
+    content: "\f00d";
+    margin-top: 18px;
+    display: block;
+}
+
+input.iconCircleHeart[type=checkbox]:before {
+    visibility: visible;
+    font-family: 'FontAwesome';
+    content: "\f004";
+    margin-top: 18px;
+    display: block;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+}
+
+input.iconCircleHeart[type=checkbox]:checked {
+    background-color: #d82b4b;
+    color: white;
+}
+
+input.iconCircleBad[type=checkbox]:checked {
+    background-color: #000000;
+    color: white;
+}
+
+input[type=checkbox]:focus{
+    outline:0;
+}
+
+.iconCirclePlus span {
+    margin-top: 15px;
+}
+
+.iconCirclePlus {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: white;
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.iconCirclePlus:hover {
+    background-color: #0d528b;
+    color: white;
+}
+
+.btnGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+/**/
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=search], div.button {
+    width: 100%;
+    height: 35px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type=search] {
+    width: 400px;
+    margin: 0;
+    padding: 0 10px;
+    background-color: #f8f8f8;
+    border: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button {
+    line-height: 35px;
+    margin: 0;
+    padding: 0 20px;
+    color: #fff;
+    background-color: #37314e;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 394px) {
+
+    .gridObjetos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 394px) {
+
+    .gridObjetos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+
+    .title {
+        font-size: 180%;
+    }
+}
+
+@media only screen and (min-width: 395px) and (max-width: 414px) {
+
+    .gridObjetos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+
+    .title {
+        font-size: 200%;
+    }
+}
+/* 650px */
+
+@media only screen and (min-width: 415px) and (max-width: 649px) {
+
+    .gridObjetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+}
+
+/* 850px */
+
+@media only screen and (min-width: 650px) and (max-width: 849px) {
+
+    .gridObjetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+}
+
+/* 1150px */
+
+@media only screen and (min-width: 850px) and (max-width: 1150px) {
+
+    .iconCirclePlus {
+        /* width: 25%; */
+    }
+    .iconCircleHeart {
+        /* width: 95%; */
+    }
+  }
+
+  /* 1190px */
+
+@media only screen and (min-width: 1190px) {
+
+    
+  }
+
+    /* 1190px */
+
+@media only screen and (min-width: 1250px) {
+
+    
+  }
+
+/* Mobile */
+
+@media only screen and (max-width: 550px) {
+    input[type=search] {
+        width: auto;
+    }
+}
+
+.modal{
+    display:none;
 }
